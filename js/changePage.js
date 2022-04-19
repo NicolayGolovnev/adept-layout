@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!!thisPlantId) {
         let response = fetch(`http://localhost:8000/herb/${thisPlantId}`)
         .then(res => res.json())
-        .then(res => loadPlant(res['plant']))
+        .then(res => loadPlant(res))
     }
 
     let response = fetch("http://localhost:8000/preserves")
         .then(res => res.json())
-        .then(res => loadPreserves(res['data']))
+        .then(res => loadPreserves(res))
 });
 
 function loadPreserves(data) {

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     let response = fetch("http://localhost:8000/plants")
         .then(res => res.json())
-        .then(res => loadPlants(res['data']))
+        .then(res => loadPlants(res))
 });
 
 function loadPlants(data) {
